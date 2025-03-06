@@ -20,6 +20,7 @@ namespace AccesoDatos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+
             frmInsertarTitulos insertarTitulos = new frmInsertarTitulos();
             insertarTitulos.Show();
         }
@@ -37,10 +38,11 @@ namespace AccesoDatos
         public void ActualizaGrid()
         {
             Datos obj = new Datos();
-            DataSet ds = obj.Consulta("SELECT title_id AS TitleID,title AS " +
-     "Title,type as Type,pub_id AS PubId," +
-     "price AS Price,advance AS Advance,royalty AS Royalty," +
-     "ytd_sales AS YtdSales,notes AS Notes,pubdate AS PubDate FROM titles");
+            DataSet ds = obj.Consulta("SELECT t.title_id AS TitleID,t.title AS " +
+             "Title,t.type as Type,p.pub_name AS PUBLISHER," +
+             "t.price AS Price,t.advance AS Advance,t.royalty AS Royalty," +
+             "t.ytd_sales AS YtdSales,t.notes AS Notes,t.pubdate AS PubDate FROM titles t "
+             + "JOIN publishers p ON t.pub_id = p.pub_id");
 
             if (ds != null)
             {
@@ -72,6 +74,26 @@ namespace AccesoDatos
                 dgvAuthors[9, e.RowIndex].Value.ToString()
                 );
             actualiza.Show();
+        }
+
+        private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAutores autores = new FrmAutores();
+            autores.Show();
+            this.Hide();
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaEmpleados listaEmpleados = new FrmListaEmpleados();
+            listaEmpleados.Show();
+            this.Hide();
+
+        }
+
+        private void frmListaDeTitulos_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

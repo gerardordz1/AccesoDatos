@@ -30,7 +30,12 @@
         {
             dgvAuthors = new DataGridView();
             btnInsertar = new Button();
+            menuStrip1 = new MenuStrip();
+            tablasToolStripMenuItem = new ToolStripMenuItem();
+            titulosToolStripMenuItem = new ToolStripMenuItem();
+            empleadosToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvAuthors).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // dgvAuthors
@@ -46,13 +51,48 @@
             // btnInsertar
             // 
             btnInsertar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnInsertar.Location = new Point(454, 29);
+            btnInsertar.BackColor = Color.LightCyan;
+            btnInsertar.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInsertar.Location = new Point(456, 36);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(94, 29);
+            btnInsertar.Size = new Size(106, 43);
             btnInsertar.TabIndex = 1;
             btnInsertar.Text = "Insertar";
-            btnInsertar.UseVisualStyleBackColor = true;
+            btnInsertar.UseVisualStyleBackColor = false;
             btnInsertar.Click += btnInsertar_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.LightCyan;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tablasToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1079, 33);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // tablasToolStripMenuItem
+            // 
+            tablasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { titulosToolStripMenuItem, empleadosToolStripMenuItem });
+            tablasToolStripMenuItem.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
+            tablasToolStripMenuItem.Size = new Size(99, 29);
+            tablasToolStripMenuItem.Text = "Tablas";
+            // 
+            // titulosToolStripMenuItem
+            // 
+            titulosToolStripMenuItem.Name = "titulosToolStripMenuItem";
+            titulosToolStripMenuItem.Size = new Size(220, 30);
+            titulosToolStripMenuItem.Text = "Titulos";
+            titulosToolStripMenuItem.Click += titulosToolStripMenuItem_Click;
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            empleadosToolStripMenuItem.Size = new Size(220, 30);
+            empleadosToolStripMenuItem.Text = "Empleados";
+            empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
             // 
             // FrmAutores
             // 
@@ -61,17 +101,26 @@
             ClientSize = new Size(1079, 616);
             Controls.Add(btnInsertar);
             Controls.Add(dgvAuthors);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "FrmAutores";
-            Text = "FrmAutores";
+            Text = "Autores";
             Activated += FrmAutores_Activated;
             Load += FrmAutores_Load;
             ((System.ComponentModel.ISupportInitialize)dgvAuthors).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgvAuthors;
         private Button btnInsertar;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem tablasToolStripMenuItem;
+        private ToolStripMenuItem titulosToolStripMenuItem;
+        private ToolStripMenuItem empleadosToolStripMenuItem;
     }
 }

@@ -36,5 +36,10 @@ namespace AccesoDatos
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -49,5 +49,23 @@ namespace AccesoDatos
             FrmListaEmpleados listaEmpleados = new FrmListaEmpleados();
             listaEmpleados.Show();
         }
+
+        private void autoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmAutores frmAutores = new FrmAutores();
+            frmAutores.Show();
+        }
+
+        private void títulosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListaDeTitulos listaDeTitulos = new frmListaDeTitulos();
+            listaDeTitulos.Show();
+        }
+
+        private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmListaEmpleados listaEmpleados = new FrmListaEmpleados();
+            listaEmpleados.Show();
+        }
     }
 }

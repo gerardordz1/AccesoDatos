@@ -20,7 +20,7 @@ namespace AccesoDatos
             txtTitleId.Text = title_id;
             txtTitle.Text = title;
             txtType.Text = type;
-            txtPub.Text = pub_id;
+            cmbPubId.Text = pub_id;
             txtPrice.Text = price;
             txtAdvance.Text = advance;
             txtRoyalty.Text = royalty;
@@ -31,18 +31,19 @@ namespace AccesoDatos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string pubId = cmbPubId.SelectedValue != null ? cmbPubId.SelectedValue.ToString() : "";
             Datos datos = new Datos();
             bool f = datos.comando("update titles set " +
-    "title='" + txtTitle.Text +
-    "', type='" + txtType.Text +
-    "', pub_id='" + txtPub.Text +
-    "', price='" + txtPrice.Text +
-    "', advance='" + txtAdvance.Text +
-    "', royalty='" + txtRoyalty.Text +
-    "', ytd_sales='" + txtYtdSales.Text +
-    "', notes='" + txtNotes.Text +
-    "', pubdate='" + dtpPub.Value.Year + "-" + dtpPub.Value.Month + "-" + dtpPub.Value.Day +
-    "' where title_id='" + txtTitleId.Text + "'");
+                 "title='" + txtTitle.Text +
+                 "', type='" + txtType.Text +
+                 "', pub_id='" + pubId +
+                 "', price='" + txtPrice.Text +
+                 "', advance='" + txtAdvance.Text +
+                 "', royalty='" + txtRoyalty.Text +
+                 "', ytd_sales='" + txtYtdSales.Text +
+                 "', notes='" + txtNotes.Text +
+                 "', pubdate='" + dtpPub.Value.Year + "-" + dtpPub.Value.Month + "-" + dtpPub.Value.Day +
+                 "' where title_id='" + txtTitleId.Text + "'");
             if (f == true)
             {
                 MessageBox.Show("Datos Actualizados", "Sistema",
@@ -70,6 +71,26 @@ namespace AccesoDatos
                 {
                     MessageBox.Show("Error De Sistema", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void frmActualizaLista_Load(object sender, EventArgs e)
+        {
+            Datos objPub = new Datos();
+            DataSet dsPub = objPub.Consulta("SELECT pub_id, pub_name FROM publishers ORDER BY pub_id");
+            if (dsPub != null && dsPub.Tables.Count > 0)
+            {
+                cmbPubId.DataSource = dsPub.Tables[0];
+                cmbPubId.DisplayMember = "pub_name";
+                cmbPubId.ValueMember = "pub_id";
+
+
+
             }
         }
     }

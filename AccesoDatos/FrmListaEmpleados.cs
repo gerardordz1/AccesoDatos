@@ -20,10 +20,13 @@ namespace AccesoDatos
         public void ActualizaGrid()
         {
             Datos obj = new Datos();
-            DataSet ds = obj.Consulta("SELECT emp_id AS ID,fname AS " +
-     "[First Name],minit as MINIT,lname AS [Last Name]," +
-     "job_id AS JOB_ID,job_lvl AS JOB_LEVEL,pub_id as PUB_ID," +
-     "hire_date AS HIRE_DATE FROM employee");
+            DataSet ds = obj.Consulta("SELECT e.emp_id AS ID, e.fname AS [First Name], " +
+                "e.minit as MINIT, e.lname AS [Last Name], " +
+                "j.job_desc AS JOB, e.job_lvl AS JOB_LEVEL, p.pub_name AS PUBLISHER, " +
+                "e.hire_date AS HIRE_DATE " +
+                "FROM employee e " +
+                "JOIN jobs j ON e.job_id = j.job_id " +
+                "JOIN publishers p ON e.pub_id = p.pub_id");
 
             if (ds != null)
             {
@@ -66,6 +69,20 @@ namespace AccesoDatos
             frmInsertarEmpleados InsertarEmpleados = new frmInsertarEmpleados();
             InsertarEmpleados.Show();
 
+        }
+
+        private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAutores autores = new FrmAutores();
+            autores.Show();
+            this.Hide();
+        }
+
+        private void titulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDeTitulos listaDeTitulos = new frmListaDeTitulos();
+            listaDeTitulos.Show();
+            this.Hide();
         }
     }
 }

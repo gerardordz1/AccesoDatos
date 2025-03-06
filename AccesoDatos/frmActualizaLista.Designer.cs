@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnCancelar = new Button();
-            button1 = new Button();
+            btnActualiza = new Button();
             label8 = new Label();
             txtRoyalty = new TextBox();
             label7 = new Label();
@@ -39,7 +39,6 @@
             label5 = new Label();
             txtPrice = new TextBox();
             label4 = new Label();
-            txtPub = new TextBox();
             label3 = new Label();
             txtType = new TextBox();
             label2 = new Label();
@@ -51,36 +50,43 @@
             txtNotes = new TextBox();
             label10 = new Label();
             dtpPub = new DateTimePicker();
+            cmbPubId = new ComboBox();
             SuspendLayout();
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(361, 354);
+            btnCancelar.BackColor = Color.LightCyan;
+            btnCancelar.Font = new Font("Verdana", 10.2F, FontStyle.Bold);
+            btnCancelar.Location = new Point(388, 352);
             btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(90, 27);
+            btnCancelar.Size = new Size(126, 36);
             btnCancelar.TabIndex = 77;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // button1
+            // btnActualiza
             // 
-            button1.Location = new Point(267, 353);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(90, 27);
-            button1.TabIndex = 76;
-            button1.Text = "Actualizar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnActualiza.BackColor = Color.LightCyan;
+            btnActualiza.Font = new Font("Verdana", 10.2F, FontStyle.Bold);
+            btnActualiza.Location = new Point(267, 353);
+            btnActualiza.Margin = new Padding(0);
+            btnActualiza.Name = "btnActualiza";
+            btnActualiza.Size = new Size(119, 35);
+            btnActualiza.TabIndex = 76;
+            btnActualiza.Text = "Actualizar";
+            btnActualiza.UseVisualStyleBackColor = false;
+            btnActualiza.Click += button1_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label8.Location = new Point(168, 210);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(58, 20);
+            label8.Size = new Size(71, 18);
             label8.TabIndex = 75;
             label8.Text = "Royalty";
             // 
@@ -95,10 +101,11 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label7.Location = new Point(28, 210);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(66, 20);
+            label7.Size = new Size(78, 18);
             label7.TabIndex = 73;
             label7.Text = "Advance";
             // 
@@ -113,10 +120,11 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label6.Location = new Point(311, 210);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(74, 20);
+            label6.Size = new Size(90, 18);
             label6.TabIndex = 71;
             label6.Text = "YTD Sales";
             // 
@@ -131,16 +139,17 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(168, 144);
+            label5.Font = new Font("Verdana", 9F, FontStyle.Bold);
+            label5.Location = new Point(182, 144);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(41, 20);
+            label5.Size = new Size(48, 18);
             label5.TabIndex = 69;
             label5.Text = "Price";
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(168, 166);
+            txtPrice.Location = new Point(182, 166);
             txtPrice.Margin = new Padding(2);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(283, 27);
@@ -149,28 +158,22 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label4.Location = new Point(28, 144);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(51, 20);
+            label4.Size = new Size(62, 18);
             label4.TabIndex = 67;
             label4.Text = "Pub Id";
-            // 
-            // txtPub
-            // 
-            txtPub.Location = new Point(29, 166);
-            txtPub.Margin = new Padding(2);
-            txtPub.Name = "txtPub";
-            txtPub.Size = new Size(121, 27);
-            txtPub.TabIndex = 66;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label3.Location = new Point(314, 83);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(40, 20);
+            label3.Size = new Size(48, 18);
             label3.TabIndex = 65;
             label3.Text = "Type";
             // 
@@ -185,10 +188,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label2.Location = new Point(28, 83);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(38, 20);
+            label2.Size = new Size(43, 18);
             label2.TabIndex = 63;
             label2.Text = "Title";
             // 
@@ -212,30 +216,36 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label1.Location = new Point(28, 22);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(55, 20);
+            label1.Size = new Size(66, 18);
             label1.TabIndex = 60;
             label1.Text = "Title Id";
             // 
             // btnBorrar
             // 
-            btnBorrar.Location = new Point(168, 352);
+            btnBorrar.BackColor = Color.LightCyan;
+            btnBorrar.Font = new Font("Verdana", 10.2F, FontStyle.Bold);
+            btnBorrar.Location = new Point(145, 352);
+            btnBorrar.Margin = new Padding(0);
             btnBorrar.Name = "btnBorrar";
-            btnBorrar.Size = new Size(94, 29);
+            btnBorrar.Size = new Size(115, 36);
             btnBorrar.TabIndex = 59;
             btnBorrar.Text = "Borrar";
-            btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.UseVisualStyleBackColor = false;
             btnBorrar.Click += btnBorrar_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Verdana", 9F, FontStyle.Bold);
+            label9.ForeColor = SystemColors.ControlText;
             label9.Location = new Point(28, 287);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(48, 20);
+            label9.Size = new Size(56, 18);
             label9.TabIndex = 79;
             label9.Text = "Notes";
             // 
@@ -250,31 +260,43 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label10.Location = new Point(168, 287);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
-            label10.Size = new Size(76, 20);
+            label10.Size = new Size(92, 18);
             label10.TabIndex = 81;
             label10.Text = "Pub Dates";
             // 
             // dtpPub
             // 
+            dtpPub.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtpPub.Location = new Point(168, 310);
             dtpPub.Name = "dtpPub";
-            dtpPub.Size = new Size(250, 27);
+            dtpPub.Size = new Size(346, 26);
             dtpPub.TabIndex = 82;
+            // 
+            // cmbPubId
+            // 
+            cmbPubId.FormattingEnabled = true;
+            cmbPubId.Location = new Point(26, 166);
+            cmbPubId.Name = "cmbPubId";
+            cmbPubId.Size = new Size(137, 28);
+            cmbPubId.TabIndex = 83;
             // 
             // frmActualizaLista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(555, 411);
+            Controls.Add(cmbPubId);
             Controls.Add(dtpPub);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(txtNotes);
             Controls.Add(btnCancelar);
-            Controls.Add(button1);
+            Controls.Add(btnActualiza);
             Controls.Add(label8);
             Controls.Add(txtRoyalty);
             Controls.Add(label7);
@@ -284,7 +306,6 @@
             Controls.Add(label5);
             Controls.Add(txtPrice);
             Controls.Add(label4);
-            Controls.Add(txtPub);
             Controls.Add(label3);
             Controls.Add(txtType);
             Controls.Add(label2);
@@ -292,8 +313,10 @@
             Controls.Add(txtTitleId);
             Controls.Add(label1);
             Controls.Add(btnBorrar);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "frmActualizaLista";
-            Text = "frmActualizaLista";
+            Text = "Actualiza Lista";
+            Load += frmActualizaLista_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -301,7 +324,7 @@
         #endregion
 
         private Button btnCancelar;
-        private Button button1;
+        private Button btnActualiza;
         private Label label8;
         private TextBox txtRoyalty;
         private Label label7;
@@ -311,7 +334,6 @@
         private Label label5;
         private TextBox txtPrice;
         private Label label4;
-        private TextBox txtPub;
         private Label label3;
         private TextBox txtType;
         private Label label2;
@@ -323,5 +345,6 @@
         private TextBox txtNotes;
         private Label label10;
         private DateTimePicker dtpPub;
+        private ComboBox cmbPubId;
     }
 }

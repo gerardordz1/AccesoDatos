@@ -73,5 +73,19 @@ namespace AccesoDatos
             frmInsertarAutores insertarAutores = new frmInsertarAutores();
             insertarAutores.Show();
         }
+
+        private void titulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDeTitulos listaDeTitulos = new frmListaDeTitulos();
+            listaDeTitulos.Show();
+            this.Hide();
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaEmpleados listaEmpleados = new FrmListaEmpleados();
+            listaEmpleados.Show();
+            this.Hide();
+        }
     }
 }

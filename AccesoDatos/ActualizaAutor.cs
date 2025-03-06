@@ -112,5 +112,10 @@ namespace AccesoDatos
                 MessageBox.Show("Error al actualizar", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

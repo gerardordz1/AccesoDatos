@@ -21,8 +21,8 @@ namespace AccesoDatos
         {
             Datos datos = new Datos();
             bool f = datos.comando("insert into titles values('" + txtTitleId.Text + "','" +
-                txtTitle.Text + "','" + txtType.Text + "','" + txtPub.Text + "','" +
-                txtPrice.Text + "','" + txtAdvance.Text + "','" + txtRoyalty.Text + "','" + txtYtdSales.Text + "','"+ txtNotes.Text + "','"+ dtpPub.Value.Year + "/" + dtpPub.Value.Month
+                txtTitle.Text + "','" + txtType.Text + "','" + cmbPubId.SelectedValue.ToString() + "','" +
+                txtPrice.Text + "','" + txtAdvance.Text + "','" + txtRoyalty.Text + "','" + txtYtdSales.Text + "','" + txtNotes.Text + "','" + dtpPub.Value.Year + "/" + dtpPub.Value.Month
                 + "/" + dtpPub.Value.Day + "')"); ;
             if (f == true)
             {
@@ -34,6 +34,25 @@ namespace AccesoDatos
             {
                 MessageBox.Show("Error al insertar", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void frmInsertarTitulos_Load(object sender, EventArgs e)
+        {
+            Datos obj = new Datos();
+
+
+            DataSet ds = obj.Consulta("SELECT pub_id, pub_name FROM publishers");
+            if (ds != null)
+            {
+                cmbPubId.DataSource = ds.Tables[0];
+                cmbPubId.DisplayMember = "pub_name";
+                cmbPubId.ValueMember = "pub_id";
             }
         }
     }

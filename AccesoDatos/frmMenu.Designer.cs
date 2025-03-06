@@ -28,79 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             menuStrip1 = new MenuStrip();
-            autoresToolStripMenuItem = new ToolStripMenuItem();
-            listaToolStripMenuItem = new ToolStripMenuItem();
-            títulosToolStripMenuItem = new ToolStripMenuItem();
-            listaDeTítulosToolStripMenuItem = new ToolStripMenuItem();
-            empleadosToolStripMenuItem = new ToolStripMenuItem();
-            listaDeEmpleadosToolStripMenuItem = new ToolStripMenuItem();
+            tablasToolStripMenuItem = new ToolStripMenuItem();
+            autoresToolStripMenuItem1 = new ToolStripMenuItem();
+            títulosToolStripMenuItem1 = new ToolStripMenuItem();
+            empleadosToolStripMenuItem1 = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { autoresToolStripMenuItem, títulosToolStripMenuItem, empleadosToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tablasToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(513, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
-            // autoresToolStripMenuItem
+            // tablasToolStripMenuItem
             // 
-            autoresToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listaToolStripMenuItem });
-            autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            autoresToolStripMenuItem.Size = new Size(74, 24);
-            autoresToolStripMenuItem.Text = "Autores";
+            tablasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { autoresToolStripMenuItem1, títulosToolStripMenuItem1, empleadosToolStripMenuItem1 });
+            tablasToolStripMenuItem.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
+            tablasToolStripMenuItem.Size = new Size(99, 29);
+            tablasToolStripMenuItem.Text = "Tablas";
             // 
-            // listaToolStripMenuItem
+            // autoresToolStripMenuItem1
             // 
-            listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            listaToolStripMenuItem.Size = new Size(198, 26);
-            listaToolStripMenuItem.Text = "Lista de Autores";
-            listaToolStripMenuItem.Click += listaToolStripMenuItem_Click;
+            autoresToolStripMenuItem1.Name = "autoresToolStripMenuItem1";
+            autoresToolStripMenuItem1.Size = new Size(220, 30);
+            autoresToolStripMenuItem1.Text = "Autores";
+            autoresToolStripMenuItem1.Click += autoresToolStripMenuItem1_Click;
             // 
-            // títulosToolStripMenuItem
+            // títulosToolStripMenuItem1
             // 
-            títulosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listaDeTítulosToolStripMenuItem });
-            títulosToolStripMenuItem.Name = "títulosToolStripMenuItem";
-            títulosToolStripMenuItem.Size = new Size(67, 24);
-            títulosToolStripMenuItem.Text = "Títulos";
+            títulosToolStripMenuItem1.Name = "títulosToolStripMenuItem1";
+            títulosToolStripMenuItem1.Size = new Size(220, 30);
+            títulosToolStripMenuItem1.Text = "Títulos";
+            títulosToolStripMenuItem1.Click += títulosToolStripMenuItem1_Click;
             // 
-            // listaDeTítulosToolStripMenuItem
+            // empleadosToolStripMenuItem1
             // 
-            listaDeTítulosToolStripMenuItem.Name = "listaDeTítulosToolStripMenuItem";
-            listaDeTítulosToolStripMenuItem.Size = new Size(191, 26);
-            listaDeTítulosToolStripMenuItem.Text = "Lista de Títulos";
-            listaDeTítulosToolStripMenuItem.Click += listaDeTítulosToolStripMenuItem_Click;
+            empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
+            empleadosToolStripMenuItem1.Size = new Size(220, 30);
+            empleadosToolStripMenuItem1.Text = "Empleados";
+            empleadosToolStripMenuItem1.Click += empleadosToolStripMenuItem1_Click;
             // 
-            // empleadosToolStripMenuItem
+            // pictureBox1
             // 
-            empleadosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listaDeEmpleadosToolStripMenuItem });
-            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            empleadosToolStripMenuItem.Size = new Size(97, 24);
-            empleadosToolStripMenuItem.Text = "Empleados";
-            // 
-            // listaDeEmpleadosToolStripMenuItem
-            // 
-            listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
-            listaDeEmpleadosToolStripMenuItem.Size = new Size(224, 26);
-            listaDeEmpleadosToolStripMenuItem.Text = "Lista de Empleados";
-            listaDeEmpleadosToolStripMenuItem.Click += listaDeEmpleadosToolStripMenuItem_Click;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 36);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(513, 407);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(513, 446);
+            Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "frmMenu";
-            Text = "frmMenu";
+            Text = "Menu";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -108,11 +107,10 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem autoresToolStripMenuItem;
-        private ToolStripMenuItem listaToolStripMenuItem;
-        private ToolStripMenuItem títulosToolStripMenuItem;
-        private ToolStripMenuItem listaDeTítulosToolStripMenuItem;
-        private ToolStripMenuItem empleadosToolStripMenuItem;
-        private ToolStripMenuItem listaDeEmpleadosToolStripMenuItem;
+        private ToolStripMenuItem tablasToolStripMenuItem;
+        private ToolStripMenuItem autoresToolStripMenuItem1;
+        private ToolStripMenuItem títulosToolStripMenuItem1;
+        private ToolStripMenuItem empleadosToolStripMenuItem1;
+        private PictureBox pictureBox1;
     }
 }

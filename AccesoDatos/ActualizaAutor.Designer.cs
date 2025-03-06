@@ -52,42 +52,50 @@
             // 
             // btnBorrar
             // 
-            btnBorrar.Location = new Point(166, 262);
+            btnBorrar.BackColor = Color.LightCyan;
+            btnBorrar.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBorrar.Location = new Point(147, 278);
             btnBorrar.Name = "btnBorrar";
-            btnBorrar.Size = new Size(94, 29);
+            btnBorrar.Size = new Size(101, 33);
             btnBorrar.TabIndex = 19;
             btnBorrar.Text = "Borrar";
-            btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.UseVisualStyleBackColor = false;
             btnBorrar.Click += btnBorrar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(359, 264);
+            btnCancelar.BackColor = Color.LightCyan;
+            btnCancelar.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(395, 279);
             btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(90, 27);
+            btnCancelar.Size = new Size(105, 32);
             btnCancelar.TabIndex = 38;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(265, 263);
+            button1.BackColor = Color.LightCyan;
+            button1.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(253, 278);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(90, 27);
+            button1.Size = new Size(126, 33);
             button1.TabIndex = 37;
             button1.Text = "Actualizar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // chkContract
             // 
             chkContract.AutoSize = true;
-            chkContract.Location = new Point(26, 267);
+            chkContract.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chkContract.Location = new Point(26, 285);
             chkContract.Margin = new Padding(2);
             chkContract.Name = "chkContract";
-            chkContract.Size = new Size(87, 24);
+            chkContract.Size = new Size(112, 24);
             chkContract.TabIndex = 36;
             chkContract.Text = "Contract";
             chkContract.UseVisualStyleBackColor = true;
@@ -95,10 +103,11 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label8.Location = new Point(166, 197);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(43, 20);
+            label8.Size = new Size(53, 18);
             label8.TabIndex = 35;
             label8.Text = "State";
             // 
@@ -113,10 +122,11 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label7.Location = new Point(26, 197);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(34, 20);
+            label7.Size = new Size(40, 18);
             label7.TabIndex = 33;
             label7.Text = "City";
             // 
@@ -131,10 +141,11 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label6.Location = new Point(309, 197);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(69, 20);
+            label6.Size = new Size(83, 18);
             label6.TabIndex = 31;
             label6.Text = "ZIP Code";
             // 
@@ -149,10 +160,11 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label5.Location = new Point(166, 131);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(62, 20);
+            label5.Size = new Size(75, 18);
             label5.TabIndex = 29;
             label5.Text = "Address";
             // 
@@ -167,10 +179,11 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label4.Location = new Point(26, 131);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(59, 18);
             label4.TabIndex = 27;
             label4.Text = "Phone";
             // 
@@ -185,10 +198,11 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label3.Location = new Point(246, 70);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(79, 20);
+            label3.Size = new Size(97, 18);
             label3.TabIndex = 25;
             label3.Text = "Last Name";
             // 
@@ -203,10 +217,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label2.Location = new Point(26, 70);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(80, 20);
+            label2.Size = new Size(98, 18);
             label2.TabIndex = 23;
             label2.Text = "First Name";
             // 
@@ -221,10 +236,11 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 9F, FontStyle.Bold);
             label1.Location = new Point(26, 9);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(22, 20);
+            label1.Size = new Size(26, 18);
             label1.TabIndex = 20;
             label1.Text = "Id";
             // 

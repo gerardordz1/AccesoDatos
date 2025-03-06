@@ -30,47 +30,97 @@
         {
             btnInsertar = new Button();
             dgvAuthors = new DataGridView();
+            menuStrip1 = new MenuStrip();
+            tablasToolStripMenuItem = new ToolStripMenuItem();
+            autoresToolStripMenuItem = new ToolStripMenuItem();
+            empleadosToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvAuthors).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // btnInsertar
             // 
             btnInsertar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnInsertar.Location = new Point(356, 12);
+            btnInsertar.BackColor = Color.LightCyan;
+            btnInsertar.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInsertar.Location = new Point(357, 40);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(391, 29);
+            btnInsertar.Size = new Size(649, 29);
             btnInsertar.TabIndex = 3;
             btnInsertar.Text = "Insertar";
-            btnInsertar.UseVisualStyleBackColor = true;
+            btnInsertar.UseVisualStyleBackColor = false;
             btnInsertar.Click += btnInsertar_Click;
             // 
             // dgvAuthors
             // 
             dgvAuthors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAuthors.Location = new Point(12, 64);
+            dgvAuthors.Location = new Point(6, 75);
             dgvAuthors.Name = "dgvAuthors";
             dgvAuthors.RowHeadersWidth = 51;
-            dgvAuthors.Size = new Size(1079, 536);
+            dgvAuthors.Size = new Size(1337, 536);
             dgvAuthors.TabIndex = 2;
             dgvAuthors.CellContentClick += dgvAuthors_CellContentClick;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.LightCyan;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tablasToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1355, 33);
+            menuStrip1.TabIndex = 4;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // tablasToolStripMenuItem
+            // 
+            tablasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { autoresToolStripMenuItem, empleadosToolStripMenuItem });
+            tablasToolStripMenuItem.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
+            tablasToolStripMenuItem.Size = new Size(99, 29);
+            tablasToolStripMenuItem.Text = "Tablas";
+            // 
+            // autoresToolStripMenuItem
+            // 
+            autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
+            autoresToolStripMenuItem.Size = new Size(220, 30);
+            autoresToolStripMenuItem.Text = "Autores";
+            autoresToolStripMenuItem.Click += autoresToolStripMenuItem_Click;
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            empleadosToolStripMenuItem.Size = new Size(220, 30);
+            empleadosToolStripMenuItem.Text = "Empleados";
+            empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
             // 
             // frmListaDeTitulos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1097, 605);
+            ClientSize = new Size(1355, 613);
             Controls.Add(btnInsertar);
             Controls.Add(dgvAuthors);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "frmListaDeTitulos";
-            Text = "frmListaDeTitulos";
+            Text = "Lista de Titulos";
             Activated += frmListaDeTitulos_Activated_1;
+            Load += frmListaDeTitulos_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvAuthors).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnInsertar;
         private DataGridView dgvAuthors;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem tablasToolStripMenuItem;
+        private ToolStripMenuItem autoresToolStripMenuItem;
+        private ToolStripMenuItem empleadosToolStripMenuItem;
     }
 }
